@@ -1,5 +1,5 @@
-var mysql = require("mysql");
 var inquirer = require("inquirer");
+var mysql = require("mysql");
 require("console.table");
 
 
@@ -23,13 +23,40 @@ function showItems() {
     if (error) throw error;
     // show on page
     console.table(response);
-
   })
   question();
 }
 
-function question(){
+function question() {
+  inquirer
+    .prompt({
+      name: "products",
+      type: "input",
+      message: "What is the id of the product you would like to purchase? "
+    }
+    )
+      .then(function(answer) {
+        var query = "SELECT item_id FROM products";
+        connection.query(query)
+        
+      })
+      question2();
+}
 
+
+function question2() {
+  inquirer
+    .prompt({
+      name: "products",
+      type: "input",
+      message:"How many of this product would you like to purchase? "
+    }
+    )
+      .then(function(answers) {
+        var query = "SELECT item_id FROM products";
+        connection.query(query)
+        
+      })
 }
 
 
