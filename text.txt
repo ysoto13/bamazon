@@ -1,0 +1,29 @@
+Questions: What is the id of the product you would like to purchase?
+
+Questions: How many of the product would you like to purchase?
+
+If it is more than what we have then say something like...
+	Sorry but we do not have enough of the product in stock for your
+order...
+What did you want to do?
+
+-Select new product
+-Quit
+
+for quit it should bring back the table
+
+if we do have enough it will multiply the amount they want to purchase with 
+the price astablished in the table above. It will give us that total & give
+us something like this...
+
+Yippie!! We have enough products for your order. Please pay AMOUNT so your
+order can
+be processed. 
+Product updates!
+
+run node again
+
+the table comes up with update on stock quantity
+
+
+READmE
