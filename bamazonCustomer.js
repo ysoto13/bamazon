@@ -23,40 +23,38 @@ function showItems() {
     if (error) throw error;
     // show on page
     console.table(response);
+    question(response);
   })
-  question();
+  
 }
 
-function question() {
+function question(response) {
   inquirer
-    .prompt({
-      name: "products",
+    .prompt([
+      {
+      name: "productId",
       type: "input",
       message: "What is the id of the product you would like to purchase? "
-    }
-    )
-      .then(function(answer) {
-        var query = "SELECT item_id FROM products";
-        connection.query(query)
-        
-      })
-      question2();
-}
-
-
-function question2() {
-  inquirer
-    .prompt({
-      name: "products",
+    },
+    {
+      name: "productQty",
       type: "input",
       message:"How many of this product would you like to purchase? "
-    }
-    )
-      .then(function(answers) {
-        var query = "SELECT item_id FROM products";
-        connection.query(query)
+    }])
+      .then(function(answer) {
+        console.log(answer.productId)
+        console.log(response)
+
+        var selectedId = answer.productId;
+        var index = answer.productId - 1
+        
+        console.log(response[index])
+        // var query = "SELECT item_id FROM products";
+        // connection.query(query)
         
       })
+      connection.end();
 }
+
 
 
