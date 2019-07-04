@@ -88,5 +88,9 @@ function question(response) {
 
 
 
-
+// Some where in my code it wasn't taking in something that would make the next step in the application run
+// I still need some help understand what is the right code to go into this program.
+// What I wasn't achieving was getting the price and quantity to update after customer had chosen what they wanted to purchase and how many of it.
+// I was trying to go back to my in class activiites to figure out what I needed to do but that didn't help much. I
+// I think I need to switch some things around and maybe it will work.
 
